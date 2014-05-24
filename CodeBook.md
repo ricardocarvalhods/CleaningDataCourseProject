@@ -1,5 +1,4 @@
-CodeBook
-============================
+# CodeBook
 
 Describes the variables, data and transformations performed to clean up the data and create a tidy dataset from the file at https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
 Assumes that:
@@ -7,9 +6,14 @@ Assumes that:
 - The zip file mentioned above is extracted and creates a folder on the same path containing the script
 The script runs in eight different parts, as depicted below. It creates different variables in each of the steps, for traceability purposes, and returns the final tidy dataset in the end.
 
-### PART One - Loading labels
+## PART One
+
+Objectives:
+
+1. Loading labels
 
 Steps:
+
 1. Loads activities labels
 2. Loads features labels
 
@@ -17,9 +21,14 @@ Variables created:
 - activities_labels:
 - features_labels:
 
-### PART Two - Loading all test datasets (measurements, subjects, activities)
+### PART Two
+
+Objectives: 
+
+1. Loading all test datasets (measurements, subjects, activities)
 
 Steps:
+
 1. Loads test data measurements
 2. Loads test data subjects
 3. Loading test data activities
@@ -29,9 +38,14 @@ Variables created:
 - test_subjects:
 - test_activities:
 
-### PART Three - Loading all train datasets (measurements, subjects, activities)
+### PART Three
+
+Objectives: 
+
+1. Loading all train datasets (measurements, subjects, activities)
 
 Steps:
+
 1. Loads train data measurements
 2. Loads test data subjects
 3. Loads test data activities
