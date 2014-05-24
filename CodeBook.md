@@ -4,9 +4,9 @@ Describes the variables, data and transformations performed by run_analysis.R to
 
 ###### Assumes that:
 - The **data.table** library is **installed**
-- The zip file mentioned above is extracted and creates a **folder** on the **same path** containing the script
+- The zip file mentioned above is extracted and creates a **folder** on the **same path** containing the run_analysis.R **script**
 
-The script runs in eight different parts, as depicted below. It creates different variables in each of the steps, for traceability purposes, and returns the final tidy dataset in the end.
+The script runs in eight different parts, as depicted below. It creates different variables in each of the steps, for traceability purposes, and returns the final tidy dataset in the end in the data.table format. Refer to the comments on the script file run_analysis.R to obtain the code for each step mentioned here - their names match.
 
 ## PART One
 
