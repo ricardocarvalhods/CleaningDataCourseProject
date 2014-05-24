@@ -2,8 +2,8 @@
 =========================
 
 Aside from this README.md file, this repository contains other two files:
-- run_analysis.R
-- CodeBook.md
+- [run_analysis.R](https://github.com/ricardo-sc/CleaningDataCourseProject/blob/master/run_analysis.R)
+- [CodeBook.md](https://github.com/ricardo-sc/CleaningDataCourseProject/blob/master/CodeBook.md)
 
 The script run_analysis.R is used to accomplish the course project. Which is obtain data from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and create a tidy data set with the following main instructions:
 - Merges the training and the test sets to create one data set
