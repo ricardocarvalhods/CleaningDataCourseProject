@@ -1,6 +1,6 @@
 # CodeBook
 
-Describes the variables, data and transformations performed to clean up the data and create a tidy dataset from the file at https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
+Describes the variables, data and transformations performed by run_analysis.R to clean up the data and create a tidy dataset from the file at https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
 
 ###### Assumes that:
 - The **data.table** library is **installed**
@@ -18,8 +18,8 @@ The script runs in eight different parts, as depicted below. It creates differen
 2. Loads features labels
 
 ###### Variables created:
-- activities_labels:
-- features_labels:
+- **activities_labels:** Data frame containing activities IDs and their descriptions
+- **features_labels:** Data frame containing measurements numbers and their descriptions
 
 ## PART Two
 
@@ -32,9 +32,9 @@ The script runs in eight different parts, as depicted below. It creates differen
 3. Loading test data activities
 
 ###### Variables created:
-- test:
-- test_subjects:
-- test_activities:
+- **test:** Data frame containing all measurement test data
+- **test_subjects:** Data frame containing subject IDs for each test data
+- **test_activities:** Data frame containing activities IDs for each test data
 
 ## PART Three
 
@@ -47,9 +47,9 @@ The script runs in eight different parts, as depicted below. It creates differen
 3. Loads test data activities
 
 ###### Variables created:
-- train:
-- train_subjects:
-- train_activities:
+- **train:** Data frame containing all measurement train data
+- **train_subjects:** Data frame containing subject IDs for each train data
+- **train_activities:** Data frame containing activities IDs for each train data
 
 ## PART Four
 
@@ -60,10 +60,10 @@ The script runs in eight different parts, as depicted below. It creates differen
 1. Creates vector of selected features (mean and standard measurements)
 
 ###### Variables created:
-- toMatch: Vector containing words to be filtered, that is, "mean" and "std"
-- matches: Vector containing the names of the columns having "mean" and "std" on their names
-- selected_features: Dataframe with the number of the column filtered and its name
-- selected_features_v: Vector containing the names of the columns filtered in terms of Vn, that is, V1, V2, ...
+- **toMatch:** Vector containing words to be filtered, that is, "mean" and "std"
+- **matches:** Vector containing the names of the columns having "mean" and "std" on their names
+- **selected_features:** Data frame with the number of the column filtered and its name
+- **selected_features_v:** Vector containing the names of the columns filtered in terms of "Vn", that is, V1, V2, ...
 
 ## PART Five
 
@@ -79,9 +79,9 @@ The script runs in eight different parts, as depicted below. It creates differen
 4. Merges activities data to change column activities ID to its Description in selected test data
 
 ###### Variables created:
-- test_selected:
-- complete_test:
-- complete_test_desc:
+- **test_selected:** Data frame containing test data only with the selected features
+- **complete_test:** Data frame containing merged test data only with the selected features, subjects and activities data
+- **complete_test_desc:** Data frame containing merged test data only with the selected features, subjects and activities data (with activities descriptions instead of IDs)
 
 ## PART Six
 
@@ -97,9 +97,9 @@ The script runs in eight different parts, as depicted below. It creates differen
 4. Merges activities data to change column activities ID to its Description in selected train data
 
 ###### Variables created:
-- train_selected:
-- complete_train:
-- complete_train_desc:
+- **train_selected:** Data frame containing train data only with the selected features
+- **complete_train:** Data frame containing merged train data only with the selected features, subjects and activities data
+- **complete_train_desc:** Data frame containing merged train data only with the selected features, subjects and activities data (with activities descriptions instead of IDs)
 
 ## PART Seven
 
@@ -110,7 +110,7 @@ The script runs in eight different parts, as depicted below. It creates differen
 1. Merges test and train datasets
 
 ###### Variables created:
-- complete_data:
+- **complete_data:** Data frame containing merged test and train data only with the selected features, subjects and activities description data
 
 ## PART Eight
 
@@ -124,5 +124,5 @@ The script runs in eight different parts, as depicted below. It creates differen
 4. Returns final tidy dataset
 
 ###### Variables created:
-- DT:
-- Final_DT:
+- **DT:** Data table containing merged test and train data only with the selected features, subjects and activities description data
+- **Final_DT:** Data frame obtained from "DT" grouping rows by SubjectID and Activity and applying mean average on each of the measurements
