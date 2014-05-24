@@ -1,9 +1,7 @@
 'Getting and Cleaning Data' Course Project
 =========================
 
-Contains script and its code book for getting and cleaning data course project on coursera.
-
-Contains two files:
+Aside from this README.md file, this repository contains other two files:
 - run_analysis.R
 - CodeBook.md
 
